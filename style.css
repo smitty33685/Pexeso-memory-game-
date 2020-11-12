@@ -12,9 +12,14 @@ body {
   height: 100vh;
 }
 
+h2 {
+  text-transform: uppercase;
+}
+
 .grid-container {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
+  grid-gap: 1px;
   margin-top: 1rem;
 }
 
@@ -22,13 +27,21 @@ body {
   width: 100px;
   height: 100px;
   background-color: #000;
-  color: #999;
+  color: #fff;
   display: flex;
   justify-content: center;
   align-items: center;
   cursor: pointer;
+  position: relative;
 }
 
+/*
 p {
   transform: skewY(35deg);
+}
+
+*/
+
+img {
+  width: 100%;
 }
