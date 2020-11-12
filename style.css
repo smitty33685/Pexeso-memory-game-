@@ -40,12 +40,10 @@ h2,
   justify-content: center;
   align-items: center;
   cursor: pointer;
-  position: relative;
   border: 1px #222 solid;
 }
 
 p {
-  /*transform: skewY(35deg); */
   font-family: "Poppins", sans-serif;
 }
 

@@ -4,53 +4,54 @@ const imgArr = [
         img: "img/blue-lagoon.jpg"
     },
     {
+        name: "iceland2",
+        img: "img/light-house.jpg"
+    },
+    {
+        name: "iceland3",
+        img: "img/iceland.jpg"
+    },
+    {
+        name: "iceland4",
+        img: "img/reykjavik.jpg"
+    },
+    {
+        name: "iceland2",
+        img: "img/light-house.jpg"
+    },
+    {
         name: "iceland1",
         img: "img/blue-lagoon.jpg"
     },
     {
-        name: "iceland2",
-        img: "img/iceland.jpg"
-    },
-    {
-        name: "iceland2",
-        img: "img/iceland.jpg"
-    },
-    {
-        name: "iceland3",
-        img: "img/light-house.jpg"
-    },
-    {
-        name: "iceland3",
-        img: "img/light-house.jpg"
-    },
-    {
-        name: "iceland4",
-        img: "img/reykjavik.jpg"
-    },
-    {
-        name: "iceland4",
-        img: "img/reykjavik.jpg"
-    },
-    {
         name: "iceland5",
-        img: "img/view.jpg"
-    },
-    {
-        name: "iceland5",
-        img: "img/view.jpg"
-    },
-    {
-        name: "iceland6",
         img: "img/waterfalls.jpg"
     },
     {
+        name: "iceland4",
+        img: "img/reykjavik.jpg"
+    },
+    {
         name: "iceland6",
+        img: "img/view.jpg"
+    },
+    {
+        name: "iceland6",
+        img: "img/view.jpg"
+    },
+    {
+        name: "iceland3",
+        img: "img/iceland.jpg"
+    },
+    {
+        name: "iceland5",
         img: "img/waterfalls.jpg"
     },
 ]
 
 const grid = document.querySelector(".grid-container");
 const result = document.querySelector("#results");
+const h2 = document.querySelector("h2");
 
 let imgChosen = [];
 let idChosen = [];
@@ -72,6 +73,7 @@ function createPlayground() {
     }
 
     result.textContent = "0";
+
 }
 
 createPlayground();
@@ -97,6 +99,9 @@ function compareImg() {
      idChosen = [];
 
      result.textContent = score.length;
+     if(score.length === imgArr.length / 2) {
+         h2.innerText = "Congratulations!!!"
+     }
 
 }
 
