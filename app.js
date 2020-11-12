@@ -120,6 +120,6 @@ function showCard(e) {
     const inner = e.target;
     inner.innerHTML = `<img src="${imgArr[cardId].img}">`
     if(idChosen.length === 2) {
-        setTimeout(compareImg,1000);
+        setTimeout(compareImg,600);
     }
 }
