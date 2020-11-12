@@ -45,3 +45,7 @@ p {
 img {
   width: 100%;
 }
+
+.empty {
+  background: #fff;
+}

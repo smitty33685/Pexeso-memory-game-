@@ -55,7 +55,7 @@ let imgChosen = [];
 let idChosen = [];
 
 
-
+//Create Playground
 function createPlayground() {
     for(let i = 0; i < 12; i++) {
         const div = document.createElement("div");
@@ -73,7 +73,30 @@ function createPlayground() {
 
 createPlayground();
 
+//Compare Showen Cards
+function compareImg() {
+    const divs = document.querySelectorAll("div .item");
+    console.log(divs);
+    const chooseOne = idChosen[0];
+    const chooseTwo = idChosen[1];
+    if(imgChosen[0] === imgChosen[1]){
+        divs[chooseOne].style.background = "#fff";
+        divs[chooseTwo].style.background = "#fff";
+        divs[chooseOne].innerHTML = "";
+        divs[chooseTwo].innerHTML = "";
+    } else {
+        divs[chooseOne].innerHTML = `<p>Pexeso</p>`;
+        divs[chooseTwo].innerHTML = `<p>Pexeso</p>`;
+    }
 
+     imgChosen = [];
+     idChosen = [];
+}
+
+
+
+
+//Show Cards
 function showCard(e) {
     const cardId = this.getAttribute("data-id");
     idChosen.push(cardId);
@@ -82,9 +105,7 @@ function showCard(e) {
     //  img.setAttribute("src", imgArr[cardId].img);
     const inner = e.target;
     inner.innerHTML = `<img src="${imgArr[cardId].img}">`
-
-   
-  
-
-
+    if(idChosen.length === 2) {
+        setTimeout(compareImg,1000);
+    }
 }
