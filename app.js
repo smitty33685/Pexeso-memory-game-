@@ -96,7 +96,6 @@ function compareImg() {
      idChosen = [];
 
      result.textContent = score.length;
-     console.log(score.length);
 
 }
 
