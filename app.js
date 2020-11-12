@@ -50,9 +50,10 @@ const imgArr = [
 ]
 
 const grid = document.querySelector(".grid-container");
-const result = document.querySelector("#result");
+let result = document.querySelector("#results");
 let imgChosen = [];
 let idChosen = [];
+let score = [];
 
 
 //Create Playground
@@ -65,10 +66,11 @@ function createPlayground() {
         p.innerText = "Pexeso"
         div.appendChild(p);
         grid.appendChild(div);
-        console.log(div);
-
+        //Listen for click
         div.addEventListener("click", showCard);
     }
+
+    result.textContent = "0";
 }
 
 createPlayground();
@@ -76,10 +78,11 @@ createPlayground();
 //Compare Showen Cards
 function compareImg() {
     const divs = document.querySelectorAll("div .item");
-    console.log(divs);
+
     const chooseOne = idChosen[0];
     const chooseTwo = idChosen[1];
     if(imgChosen[0] === imgChosen[1]){
+        score.push(idChosen);
         divs[chooseOne].style.background = "#fff";
         divs[chooseTwo].style.background = "#fff";
         divs[chooseOne].innerHTML = "";
@@ -91,7 +94,13 @@ function compareImg() {
 
      imgChosen = [];
      idChosen = [];
+
+     result.textContent = score.length;
+     console.log(score.length);
+
 }
+
+
 
 
 
