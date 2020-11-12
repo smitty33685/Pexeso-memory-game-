@@ -50,7 +50,8 @@ const imgArr = [
 ]
 
 const grid = document.querySelector(".grid-container");
-let result = document.querySelector("#results");
+const result = document.querySelector("#results");
+
 let imgChosen = [];
 let idChosen = [];
 let score = [];
